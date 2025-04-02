@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cakes & Brunchs - Accueil</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body class="bg-yellow-50 text-gray-800">
-    <div id="header"></div>
-
-    <main class="text-center p-8">
-        <h2 class="text-3xl font-semibold mb-4">Bienvenue chez Cakes & Brunchs</h2>
-        <p class="mb-6">Pâtisseries sèches faites maison, à retrouver sur les marchés de votre région.</p>
-        <a href="produits.html" class="bg-yellow-400 px-4 py-2 rounded-xl shadow">Découvrir nos produits</a>
-    </main>
-
-    <div id="footer"></div>
-
-    <script>
-        fetch('/partials/header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header').innerHTML = data);
-    
-        fetch('/partials/footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
-
-</body>
-</html>
+<main class="text-center p-8">
+    <h2 class="text-3xl font-semibold mb-4">Bienvenue chez Cakes & Brunchs</h2>
+    <p class="mb-6">Pâtisseries sèches faites maison, à retrouver sur les marchés de votre région.</p>
+    <a href="produits.html" class="bg-yellow-400 px-4 py-2 rounded-xl shadow">Découvrir nos produits</a>
+</main>
