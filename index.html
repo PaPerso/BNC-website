@@ -39,10 +39,17 @@
     
       
       
-    <main class="text-center p-8">
+    <main id="main" class="text-center p-8">
         <h2 class="text-3xl font-semibold mb-4">Bienvenue chez Cakes & Brunchs</h2>
         <p class="mb-6">Pâtisseries sèches faites maison, à retrouver sur les marchés de votre région.</p>
-        <a href=LINKS.produits class="bg-yellow-400 px-4 py-2 rounded-xl shadow">Découvrir nos produits</a>
+        <script>
+            const main = document.getElementById('main');
+            const a = document.createElement('a');
+            a.href = LINKS.produits;
+            a.classList="bg-yellow-400 px-4 py-2 rounded-xl shadow"
+            a.text="Découvrir nos produits"
+            main.append(a);
+        </script>
     </main>
 
     <footer class="p-4 bg-white shadow-inner text-center">
