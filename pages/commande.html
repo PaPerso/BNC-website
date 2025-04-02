@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commande</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/assets/js/variables.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Commande</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="/assets/js/variables.js"></script>
 </head>
 <body class="bg-yellow-50 text-gray-800">
-  <header class="p-4 bg-white shadow-md flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Cakes & Brunchs</h1>
-    <nav>
-      <ul class="flex gap-4">
-        <li><a href=LINKS.index>Accueil</a></li>
-        <li><a href=LINKS.produits>Nos Produits</a></li>
-        <li><a href=LINKS.localisation>Où nous trouver</a></li>
-        <li><a href=LINKS.commande>Commande</a></li>
-        <li><a href=LINKS.contact>Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+	<header class="p-4 bg-white shadow-md flex justify-between items-center">
+		<h1 class="text-2xl font-bold">Cakes & Brunchs</h1>
+		<nav>
+		<ul id="nav" class="flex gap-4"></ul>
+		</nav>
+	</header>
+	
+	<script src="assets/js/variables.js"></script>
+	<script>
+		const navLinks = [
+		{ name: "Accueil", href: LINKS.index },
+		{ name: "Nos Produits", href: LINKS.produits },
+		{ name: "Où nous trouver", href: LINKS.localisation },
+		{ name: "Commande", href: LINKS.commande },
+		{ name: "Contact", href: LINKS.contact }
+		];
+	
+		const nav = document.getElementById('nav');
+		navLinks.forEach(link => {
+		const li = document.createElement('li');
+		const a = document.createElement('a');
+		a.href = link.href;
+		a.textContent = link.name;
+		li.appendChild(a);
+		nav.appendChild(li);
+		});
+	</script>
+	
 
-  <main class="p-8 text-center">
-    <h2 class="text-3xl font-semibold mb-6">Passer commande</h2>
-    <p class="mb-4">Pour passer commande, contactez-nous directement :</p>
-    <a href="mailto:contact@cakesandbrunchs.fr" class="bg-yellow-400 px-4 py-2 rounded-xl shadow">Envoyer un email</a>
-  </main>
+	<main class="p-8 text-center">
+		<h2 class="text-3xl font-semibold mb-6">Passer commande</h2>
+		<p class="mb-4">Pour passer commande, contactez-nous directement :</p>
+		<a href="mailto:contact@cakesandbrunchs.fr" class="bg-yellow-400 px-4 py-2 rounded-xl shadow">Envoyer un email</a>
+	</main>
 
-  <footer class="p-4 bg-white shadow-inner text-center">
-    <p>&copy; 2025 Cakes & Brunchs</p>
-  </footer>
+	<footer class="p-4 bg-white shadow-inner text-center">
+		<p>&copy; 2025 Cakes & Brunchs</p>
+	</footer>
 
 </body>
 </html>

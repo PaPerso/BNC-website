@@ -11,15 +11,31 @@
     <header class="p-4 bg-white shadow-md flex justify-between items-center">
         <h1 class="text-2xl font-bold">Cakes & Brunchs</h1>
         <nav>
-        <ul class="flex gap-4">
-            <li><a href=LINKS.index>Accueil</a></li>
-            <li><a href=LINKS.produits>Nos Produits</a></li>
-            <li><a href=LINKS.localisation>Où nous trouver</a></li>
-            <li><a href=LINKS.commande>Commande</a></li>
-            <li><a href=LINKS.contact>Contact</a></li>
-        </ul>
+          <ul id="nav" class="flex gap-4"></ul>
         </nav>
-    </header>
+      </header>
+      
+      <script src="assets/js/variables.js"></script>
+      <script>
+        const navLinks = [
+          { name: "Accueil", href: LINKS.index },
+          { name: "Nos Produits", href: LINKS.produits },
+          { name: "Où nous trouver", href: LINKS.localisation },
+          { name: "Commande", href: LINKS.commande },
+          { name: "Contact", href: LINKS.contact }
+        ];
+      
+        const nav = document.getElementById('nav');
+        navLinks.forEach(link => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = link.href;
+          a.textContent = link.name;
+          li.appendChild(a);
+          nav.appendChild(li);
+        });
+      </script>
+      
     <main class="text-center p-8">
         <h2 class="text-3xl font-semibold mb-4">Bienvenue chez Cakes & Brunchs</h2>
         <p class="mb-6">Pâtisseries sèches faites maison, à retrouver sur les marchés de votre région.</p>
