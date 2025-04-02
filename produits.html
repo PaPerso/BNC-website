@@ -7,40 +7,38 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-yellow-50 text-gray-800">
-  <header class="p-4 bg-white shadow-md flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Cakes & Brunchs</h1>
-    <nav>
-      <ul class="flex gap-4">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="produits.html">Nos Produits</a></li>
-        <li><a href="localisation.html">Où nous trouver</a></li>
-        <li><a href="commande.html">Commande</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div id="header"></div>
 
-  <main class="p-8 text-center">
-    <h2 class="text-3xl font-semibold mb-6">Nos Pâtisseries</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Sablés au beurre</h3>
-        <p>Délicats et fondants, faits maison.</p>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Madeleines</h3>
-        <p>Moelleuses et parfumées, idéales pour le goûter.</p>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Cookies</h3>
-        <p>Croustillants à l'extérieur, fondants à l'intérieur.</p>
-      </div>
-    </div>
-  </main>
 
-  <footer class="p-4 bg-white shadow-inner text-center">
-    <p>&copy; 2025 Cakes & Brunchs</p>
-  </footer>
+    <main class="p-8 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Nos Pâtisseries</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded-xl shadow">
+            <h3 class="text-xl font-bold mb-2">Sablés au beurre</h3>
+            <p>Délicats et fondants, faits maison.</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow">
+            <h3 class="text-xl font-bold mb-2">Madeleines</h3>
+            <p>Moelleuses et parfumées, idéales pour le goûter.</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow">
+            <h3 class="text-xl font-bold mb-2">Cookies</h3>
+            <p>Croustillants à l'extérieur, fondants à l'intérieur.</p>
+        </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('/partials/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    
+        fetch('/partials/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
 </body>
 </html>
