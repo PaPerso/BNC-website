@@ -1,9 +1,9 @@
 const site_name = "BNC-website";
 const LINKS = {
-    index: "/index.html",
-    produits: "/pages/produits.html",
-    localisation: "/pages/localisation.html",
-    commande: "/pages/commande.html",
-    contact: "/pages/contact.html"
+    index: site_name.concat("/index.html"),
+    produits: site_name.concat("/pages/produits.html"),
+    localisation: site_name.concat("/pages/localisation.html"),
+    commande: site_name.concat("/pages/commande.html"),
+    contact: site_name.concat("/pages/contact.html")
   };
   
