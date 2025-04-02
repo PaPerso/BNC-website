@@ -1,4 +1,4 @@
-const site_name = "BNC-website";
+const site_name = "/BNC-website";
 
 const index_url = site_name.concat("/index.html");
 const produits_url = site_name.concat("/pages/produits.html");
