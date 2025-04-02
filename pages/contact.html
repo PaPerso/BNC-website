@@ -13,28 +13,31 @@
 		<nav>
 		  <ul id="nav" class="flex gap-4"></ul>
 		</nav>
-	  </header>
+	</header>
 	  
-	  <script src="assets/js/variables.js"></script>
-	  <script>
-		const navLinks = [
-		  { name: "Accueil", href: LINKS.index },
-		  { name: "Nos Produits", href: LINKS.produits },
-		  { name: "Où nous trouver", href: LINKS.localisation },
-		  { name: "Commande", href: LINKS.commande },
-		  { name: "Contact", href: LINKS.contact }
-		];
-	  
-		const nav = document.getElementById('nav');
-		navLinks.forEach(link => {
-		  const li = document.createElement('li');
-		  const a = document.createElement('a');
-		  a.href = link.href;
-		  a.textContent = link.name;
-		  li.appendChild(a);
-		  nav.appendChild(li);
+	<script src="assets/js/variables.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const navLinks = [
+				{ name: "Accueil", href: LINKS.index },
+				{ name: "Nos Produits", href: LINKS.produits },
+				{ name: "Où nous trouver", href: LINKS.localisation },
+				{ name: "Commande", href: LINKS.commande },
+				{ name: "Contact", href: LINKS.contact }
+			];
+	
+			const nav = document.getElementById('nav');
+			navLinks.forEach(link => {
+				const li = document.createElement('li');
+				const a = document.createElement('a');
+				a.href = link.href;
+				a.textContent = link.name;
+				li.appendChild(a);
+				nav.appendChild(li);
+			});
 		});
-	  </script>
+	</script>
+	
 	  
 
 	<main class="p-8 text-center">
