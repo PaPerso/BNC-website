@@ -41,8 +41,26 @@
       
     <main class="p-8 text-center">
         <h2 class="text-3xl font-semibold mb-6">Nos Pâtisseries</h2>
-        <div class="grid grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded-xl shadow">
+        <div id="products_list" class="grid grid-cols-3 gap-6">
+            <script>
+                const prod_list = document.getElementById('products_list');
+                document.addEventListener('DOMContentLoaded', () => {
+                    PRODUCTS.forEach(product => {
+                        const div_product = document.createElement('div');
+                        div_product.classList = "bg-white p-4 rounded-xl shadow";
+
+                        const header = docuement.createElement('h3');
+                        header.classList = "text-xl font-bold mb-2";
+                        header.textContent = product.name;
+                        const description = docuement.createElement('p');
+                        description.textContent = product.description;
+
+                        div_product.appendChild(header);
+                        div_product.appendChild(description);
+                    });
+                });
+            </script>
+            <!-- <div class="bg-white p-4 rounded-xl shadow">
                 <h3 class="text-xl font-bold mb-2">Sablés au beurre</h3>
                 <p>Délicats et fondants, faits maison.</p>
             </div>
@@ -57,7 +75,7 @@
             <div class="bg-white p-4 rounded-xl shadow">
                 <h3 class="text-xl font-bold mb-2">Torsades chocolat</h3>
                 <p>Un délice croustillant au chocolat noir.</p>
-            </div>
+            </div> -->
             <!-- Ajoute autant de produits que tu veux -->
         </div>
     </main>
