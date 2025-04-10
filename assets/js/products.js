@@ -2,7 +2,7 @@ const PRODUCTS=[
     {
         name: "Banana Bread",
         description: "Moelleux et parfumé à la banane, parfait pour le brunch.",
-        pic: ""
+        pic: "/BNC-website/assets/images/banana_bread.jpeg"
     },
     {
         name: "Pancakes",
