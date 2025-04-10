@@ -47,31 +47,32 @@
                 const prod_list = document.getElementById('products_list');
                 document.addEventListener('DOMContentLoaded', () => {
                     PRODUCTS.forEach(product => {
-                        const div_product = document.createElement('div');
-                        div_product.classList = "bg-white p-4 rounded-xl shadow";
+                        const wrapper = document.createElement('div');
+                        wrapper.classList = "relative group";
 
-                        // Image
+                        // Image positionnée derrière
                         const image = document.createElement('img');
                         image.src = product.pic;
                         image.alt = product.name;
-                        image.classList = "w-32 h-32 object-cover mb-4 rounded-md"; // ajustable
-                        div_product.appendChild(image);
+                        image.classList = "absolute top-[-40px] left-1/2 -translate-x-1/2 w-32 h-32 object-cover rounded-md transition-transform duration-300 group-hover:top-[-80px] z-0";
+                        wrapper.appendChild(image);
 
-                        // Titre
+                        // Texte au-dessus
+                        const div_product = document.createElement('div');
+                        div_product.classList = "bg-white p-4 rounded-xl shadow relative z-10";
+
                         const header = document.createElement('h3');
                         header.classList = "text-xl font-bold mb-2";
                         header.textContent = product.name;
 
-                        // Description
                         const description = document.createElement('p');
                         description.textContent = product.description;
 
-                        // Ajout dans le bloc
                         div_product.appendChild(header);
                         div_product.appendChild(description);
+                        wrapper.appendChild(div_product);
 
-                        // Ajout au container
-                        prod_list.appendChild(div_product);
+                        prod_list.appendChild(wrapper);
                     });
                 });
             </script>
