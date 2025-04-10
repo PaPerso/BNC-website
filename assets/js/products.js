@@ -1,26 +1,26 @@
 const PRODUCTS=[
     {
-        nom: "Banana Bread",
+        name: "Banana Bread",
         description: "Moelleux et parfumé à la banane, parfait pour le brunch."
     },
     {
-        nom: "Pancakes",
+        name: "Pancakes",
         description: "Légers et dorés, accompagnés de sirop d'érable."
     },
     {
-        nom: "Morning Muffins",
+        name: "Morning Muffins",
         description: "McMuffins faits maison avec des produits végés."
     },
     {
-        nom: "Apple Rings",
+        name: "Apple Rings",
         description: "Pancakes garnis d'une fine tranche de pomme fondante."
     },
     {
-        nom: "Brownies",
+        name: "Brownies",
         description: "Gourmands, riches en chocolat, texture fondante."
     },
     {
-        nom: "Croc'choc",
+        name: "Croc'choc",
         description: "Petits pains briochés garnis de pépites de chocolat."
     }
 ];
