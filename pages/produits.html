@@ -61,23 +61,27 @@
                 document.addEventListener('DOMContentLoaded', () => {
                     PASTRIES.forEach(product => {
                         const wrapper = document.createElement('div');
-                        wrapper.classList = "relative group";
+                        // Le wrapper principal devient la carte blanche avec de l'ombre
+                        wrapper.classList = "bg-white rounded-xl shadow p-4 flex flex-col gap-4 group";
 
-                        // Image positionnée derrière
+                        // L'image est maintenant dans le flux normal, au-dessus du texte
                         const image = document.createElement('img');
                         image.src = product.pic;
-                        image.classList = "absolute top-[-40px] left-1/2 -translate-x-1/2 w-32 h-32 object-cover rounded-md transition-transform duration-500 group-hover:top-[-80px] z-0";
+                        // w-full pour prendre toute la largeur, h-48 pour une bonne hauteur (ajustable)
+                        // rounded-lg ou rounded-xl pour les bords arrondis
+                        image.classList = "w-full h-48 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105";
                         wrapper.appendChild(image);
 
-                        // Texte au-dessus
+                        // Zone de texte
                         const div_product = document.createElement('div');
-                        div_product.classList = "bg-white p-4 rounded-xl shadow relative z-10";
+                        div_product.classList = "flex flex-col gap-1";
 
                         const header = document.createElement('h3');
-                        header.classList = "text-xl font-bold mb-2";
+                        header.classList = "text-xl font-bold text-gray-800";
                         header.textContent = product.name;
 
                         const description = document.createElement('p');
+                        description.classList = "text-gray-600 text-sm";
                         description.textContent = product.description;
 
                         div_product.appendChild(header);
@@ -97,23 +101,27 @@
                 document.addEventListener('DOMContentLoaded', () => {
                     LUNCH.forEach(product => {
                         const wrapper = document.createElement('div');
-                        wrapper.classList = "relative group";
+                        // Le wrapper principal devient la carte blanche avec de l'ombre
+                        wrapper.classList = "bg-white rounded-xl shadow p-4 flex flex-col gap-4 group";
 
-                        // Image positionnée derrière
+                        // L'image est maintenant dans le flux normal, au-dessus du texte
                         const image = document.createElement('img');
                         image.src = product.pic;
-                        image.classList = "absolute top-[-40px] left-1/2 -translate-x-1/2 w-32 h-32 object-cover rounded-md transition-transform duration-500 group-hover:top-[-80px] z-0";
+                        // w-full pour prendre toute la largeur, h-48 pour une bonne hauteur (ajustable)
+                        // rounded-lg ou rounded-xl pour les bords arrondis
+                        image.classList = "w-full h-48 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105";
                         wrapper.appendChild(image);
 
-                        // Texte au-dessus
+                        // Zone de texte
                         const div_product = document.createElement('div');
-                        div_product.classList = "bg-white p-4 rounded-xl shadow relative z-10";
+                        div_product.classList = "flex flex-col gap-1";
 
                         const header = document.createElement('h3');
-                        header.classList = "text-xl font-bold mb-2";
+                        header.classList = "text-xl font-bold text-gray-800";
                         header.textContent = product.name;
 
                         const description = document.createElement('p');
+                        description.classList = "text-gray-600 text-sm";
                         description.textContent = product.description;
 
                         div_product.appendChild(header);
