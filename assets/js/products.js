@@ -11,7 +11,7 @@ const PRODUCTS=[
     },
     {
         name: "Morning Muffins",
-        description: "McMuffins faits maison avec des produits végés.",
+        description: "McMuffins faits maison avec des produits végétariens.",
         pic: ""
     },
     {
