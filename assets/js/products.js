@@ -37,4 +37,4 @@ const LUNCH=[
         description: "Pizza avec une pâte faite maison très épaisse.",
         pic: ""
     }
-]
+];
