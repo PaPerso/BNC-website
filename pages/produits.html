@@ -8,6 +8,13 @@
   <script src="/BNC-website/assets/js/variables.js"></script>
   <script src="/BNC-website/assets/js/products.js"></script>
   <link rel="stylesheet" href="/BNC-website/assets/css/style.css">
+
+  <style type="text/tailwindcss">
+    /* Grâce au type="text/tailwindcss", le CDN comprend le @apply ! */
+    .product_grid {
+      @apply grid grid-cols-4 gap-12;
+    }
+  </style>
 </head>
 <body class="bg-yellow-50 text-gray-800">
     <header class="p-4 bg-white shadow-md flex justify-between items-center">
@@ -42,7 +49,7 @@
       
     <main class="p-8 text-center">
         <h2 class="text-3xl font-semibold mb-6">Nos Pâtisseries</h2>
-        <div id="pastries_list" class="grid grid-cols-3 gap-12">
+        <div id="pastries_list" class="product_grid">
             <script>
                 const prod_list = document.getElementById('pastries_list');
                 document.addEventListener('DOMContentLoaded', () => {
@@ -78,7 +85,7 @@
         </div>
 
         <h2 class="text-3xl font-semibold mb-6">Pour le déjeuner</h2>
-        <div id="pastries_list" class="grid grid-cols-4 gap-12">
+        <div id="lunch_list" class="product_grid">
             <script>
                 const lunch_list = document.getElementById('lunch_list');
                 document.addEventListener('DOMContentLoaded', () => {
