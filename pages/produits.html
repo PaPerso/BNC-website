@@ -51,7 +51,7 @@
         <h2 class="text-3xl font-semibold mb-6">Nos Pâtisseries</h2>
         <div id="pastries_list" class="product_grid">
             <script>
-                const prod_list = document.getElementById('pastries_list');
+                const pastries_list = document.getElementById('pastries_list');
                 document.addEventListener('DOMContentLoaded', () => {
                     PASTRIES.forEach(product => {
                         const wrapper = document.createElement('div');
@@ -78,7 +78,7 @@
                         div_product.appendChild(description);
                         wrapper.appendChild(div_product);
 
-                        prod_list.appendChild(wrapper);
+                        pastries_list.appendChild(wrapper);
                     });
                 });
             </script>
@@ -114,7 +114,7 @@
                         div_product.appendChild(description);
                         wrapper.appendChild(div_product);
 
-                        prod_list.appendChild(wrapper);
+                        lunch_list.appendChild(wrapper);
                     });
                 });
             </script>
