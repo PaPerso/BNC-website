@@ -1,4 +1,4 @@
-const PRODUCTS=[
+const PASTRIES=[
     {
         name: "Banana Bread",
         description: "Moelleux et parfumé à la banane, parfait pour le brunch.",
@@ -30,3 +30,11 @@ const PRODUCTS=[
         pic: ""
     }
 ];
+
+const LUNCH=[
+    {
+        name: "Thick' Pizz",
+        description: "Pizza avec une pâte faite maison très épaisse.",
+        pic: ""
+    }
+]

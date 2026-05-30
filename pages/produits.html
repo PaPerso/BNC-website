@@ -42,11 +42,11 @@
       
     <main class="p-8 text-center">
         <h2 class="text-3xl font-semibold mb-6">Nos Pâtisseries</h2>
-        <div id="products_list" class="grid grid-cols-3 gap-12">
+        <div id="pastries_list" class="grid grid-cols-3 gap-12">
             <script>
-                const prod_list = document.getElementById('products_list');
+                const prod_list = document.getElementById('pastries_list');
                 document.addEventListener('DOMContentLoaded', () => {
-                    PRODUCTS.forEach(product => {
+                    PASTRIES.forEach(product => {
                         const wrapper = document.createElement('div');
                         wrapper.classList = "relative group";
 
@@ -75,23 +75,42 @@
                     });
                 });
             </script>
-            <!-- <div class="bg-white p-4 rounded-xl shadow">
-                <h3 class="text-xl font-bold mb-2">Sablés au beurre</h3>
-                <p>Délicats et fondants, faits maison.</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow">
-                <h3 class="text-xl font-bold mb-2">Madeleines</h3>
-                <p>Moelleuses et parfumées, idéales pour le goûter.</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow">
-                <h3 class="text-xl font-bold mb-2">Cookies</h3>
-                <p>Croustillants à l'extérieur, fondants à l'intérieur.</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow">
-                <h3 class="text-xl font-bold mb-2">Torsades chocolat</h3>
-                <p>Un délice croustillant au chocolat noir.</p>
-            </div> -->
-            <!-- Ajoute autant de produits que tu veux -->
+        </div>
+
+        <h2 class="text-3xl font-semibold mb-6">Pour le déjeuner</h2>
+        <div id="pastries_list" class="grid grid-cols-3 gap-12">
+            <script>
+                const lunch_list = document.getElementById('lunch_list');
+                document.addEventListener('DOMContentLoaded', () => {
+                    LUNCH.forEach(product => {
+                        const wrapper = document.createElement('div');
+                        wrapper.classList = "relative group";
+
+                        // Image positionnée derrière
+                        const image = document.createElement('img');
+                        image.src = product.pic;
+                        image.classList = "absolute top-[-40px] left-1/2 -translate-x-1/2 w-32 h-32 object-cover rounded-md transition-transform duration-500 group-hover:top-[-80px] z-0";
+                        wrapper.appendChild(image);
+
+                        // Texte au-dessus
+                        const div_product = document.createElement('div');
+                        div_product.classList = "bg-white p-4 rounded-xl shadow relative z-10";
+
+                        const header = document.createElement('h3');
+                        header.classList = "text-xl font-bold mb-2";
+                        header.textContent = product.name;
+
+                        const description = document.createElement('p');
+                        description.textContent = product.description;
+
+                        div_product.appendChild(header);
+                        div_product.appendChild(description);
+                        wrapper.appendChild(div_product);
+
+                        prod_list.appendChild(wrapper);
+                    });
+                });
+            </script>
         </div>
     </main>
     
